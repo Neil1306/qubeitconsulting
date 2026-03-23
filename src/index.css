@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-white text-primary antialiased transition-colors duration-300;
+}
+
+.dark body {
+  @apply bg-darkBg text-darkText;
+}
+
+
+/* Animated gradient background */
+.hero-bg {
+  background: linear-gradient(
+    120deg,
+    #2563eb,
+    #0f172a,
+    #334155
+  );
+  background-size: 300% 300%;
+  animation: gradientMove 12s ease infinite;
+}
+
+.dark .hero-bg {
+  background: linear-gradient(
+    120deg,
+    #020617,
+    #0f172a,
+    #2563eb
+  );
+  background-size: 300% 300%;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
