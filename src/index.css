@@ -12,8 +12,13 @@
 }
 
 /* 🌞 Light Mode */
+html {
+  background-color: #020617;
+}
+
 body {
-  @apply bg-white text-gray-800 antialiased transition-colors duration-300;
+  background-color: #020617;
+  color: #E2E8F0;
 }
 
 /* 🌙 Dark Mode */
