@@ -12,7 +12,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link to="/" className="flex flex-col leading-tight">
-          <span className="text-xl font-bold tracking-wide">LIBERTY</span>
+          <span className="text-xl font-bold tracking-wide">Cube IT</span>
           <span className="text-xs tracking-widest text-secondary dark:text-gray-400">
             CONSULTANCY
           </span>
