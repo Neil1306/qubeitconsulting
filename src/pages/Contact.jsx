@@ -36,12 +36,12 @@ export default function Contact() {
                   href="mailto:contact@Qube IT consultingconsultancy.co.uk"
                   className="text-accent hover:underline"
                 >
-                  contact@Qube IT consultingconsultancy.co.uk
+                  contact@qubeitconsulting.com
                 </a>
               </p>
 
               <p>
-                <strong>Location:</strong> UK / Europe
+                <strong>Location:</strong> UK / Europe / US
               </p>
             </div>
           </div>
