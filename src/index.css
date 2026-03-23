@@ -29,25 +29,31 @@ body {
 
 /* 🔥 Animated Gradient Background (UPDATED) */
 .hero-bg {
-  background: linear-gradient(
-    120deg,
-    #020617,
-    #0F172A,
-    #10B981
-  );
-  background-size: 300% 300%;
-  animation: gradientMove 12s ease infinite;
+  background: radial-gradient(
+      circle at 20% 50%,
+      rgba(16,185,129,0.15),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(16,185,129,0.1),
+      transparent 40%
+    ),
+    #020617;
 }
 
 .dark .hero-bg {
-  background: linear-gradient(
-    120deg,
-    #020617,
-    #0F172A,
-    #10B981,
-    #34D399
-  );
-  background-size: 300% 300%;
+  background: radial-gradient(
+      circle at 20% 40%,
+      rgba(16,185,129,0.15),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 10%,
+      rgba(52,211,153,0.1),
+      transparent 40%
+    ),
+    #020617;
 }
 
 /* ✨ Smooth Gradient Animation */
