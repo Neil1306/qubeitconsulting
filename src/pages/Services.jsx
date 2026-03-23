@@ -1,5 +1,7 @@
+import MainLayout from "../layouts/MainLayout"
 export default function Services() {
   return (
+    <MainLayout>
     <div className="bg-white dark:bg-darkBg transition-colors">
       <div className="max-w-7xl mx-auto px-6 py-20">
         
@@ -121,5 +123,7 @@ export default function Services() {
 
       </div>
     </div>
+    </MainLayout>
+
   )
 }
