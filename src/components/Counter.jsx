@@ -1,29 +1,37 @@
 import { useEffect, useState } from "react"
 
-export default function Counter({ value, label }) {
+export default function Counter({ value, suffix = "+" }) {
   const [count, setCount] = useState(0)
 
   useEffect(() => {
     let start = 0
     const end = value
-    const duration = 1500
-    const stepTime = Math.abs(Math.floor(duration / end))
+    const duration = 1200
+
+    const increment = end / (duration / 16) // smooth animation (~60fps)
 
     const timer = setInterval(() => {
-      start += 1
-      setCount(start)
-      if (start === end) clearInterval(timer)
-    }, stepTime)
+      start += increment
+      if (start >= end) {
+        setCount(end)
+        clearInterval(timer)
+      } else {
+        setCount(Math.floor(start))
+      }
+    }, 16)
 
     return () => clearInterval(timer)
   }, [value])
 
   return (
     <div className="text-center">
-      <div className="text-4xl font-bold text-accent">{count}+</div>
-      <div className="text-sm text-secondary dark:text-gray-400 mt-1">
-        {label}
+      
+      {/* Number */}
+      <div className="text-3xl md:text-4xl font-bold text-emerald-400 
+                      drop-shadow-[0_0_10px_rgba(16,185,129,0.5)]">
+        {count}{suffix}
       </div>
+
     </div>
   )
 }
