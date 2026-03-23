@@ -1,9 +1,11 @@
 import ServiceCard from "../components/ServiceCard"
 import CTA from "../components/CTA"
 import Counter from "../components/Counter"
+import MainLayout from "../layouts/MainLayout"
 
 export default function Home() {
   return (
+    <MainLayout>
     <div className="bg-[#020617] text-white min-h-screen">
       
       {/* 🔥 Hero Section */}
@@ -117,5 +119,6 @@ export default function Home() {
       </section>
 
     </div>
+    </MainLayout>
   )
 }
