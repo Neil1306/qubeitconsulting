@@ -61,22 +61,22 @@ export default function Home() {
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 relative z-10">
           
           <div className="card text-center">
-            <Counter value={8} />
+            <Counter value={7} />
             <p className="text-gray-400 mt-2">Years Experience</p>
           </div>
 
           <div className="card text-center">
-            <Counter value={40} />
+            <Counter value={75} />
             <p className="text-gray-400 mt-2">Projects Delivered</p>
           </div>
 
           <div className="card text-center">
-            <Counter value={98} suffix="%" />
+            <Counter value={97} suffix="%" />
             <p className="text-gray-400 mt-2">Client Satisfaction</p>
           </div>
 
           <div className="card text-center">
-            <Counter value={8} />
+            <Counter value={5} />
             <p className="text-gray-400 mt-2">Countries Served</p>
           </div>
 
