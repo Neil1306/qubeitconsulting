@@ -4,85 +4,121 @@
 
 /* 🌿 Emerald Theme Variables */
 :root {
-  --primary: #10B981;       /* Emerald */
+  --primary: #10B981;
   --primary-light: #34D399;
   --dark-bg: #020617;
-  --card-bg: #0F172A;
+  --card-bg: #0B1220; /* slightly deeper, less blue */
   --text-light: #E2E8F0;
 }
 
-/* 🌞 Light Mode */
+/* 🌙 Force Dark Theme Globally */
 html {
   background-color: #020617;
 }
 
 body {
   background-color: #020617;
-  color: #E2E8F0;
-}
-
-/* 🌙 Dark Mode */
-.dark body {
-  background-color: var(--dark-bg);
   color: var(--text-light);
+  overflow-x: hidden;
 }
 
-/* 🔥 Animated Gradient Background (UPDATED) */
+/* 🔥 INSANE HERO BACKGROUND */
 .hero-bg {
-  background: radial-gradient(
-      circle at 20% 50%,
-      rgba(16,185,129,0.15),
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at 80% 20%,
-      rgba(16,185,129,0.1),
-      transparent 40%
-    ),
-    #020617;
+  position: relative;
+  background: #020617;
+  overflow: hidden;
 }
 
-.dark .hero-bg {
-  background: radial-gradient(
-      circle at 20% 40%,
-      rgba(16,185,129,0.15),
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at 80% 10%,
-      rgba(52,211,153,0.1),
-      transparent 40%
-    ),
-    #020617;
+/* 🌿 Animated Glow Blobs */
+.hero-bg::before,
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.25;
+  animation: floatGlow 14s infinite ease-in-out;
 }
 
-/* ✨ Smooth Gradient Animation */
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+.hero-bg::before {
+  background: #10B981;
+  top: -120px;
+  left: -120px;
 }
 
-/* 🟢 Buttons (Global Styling) */
+.hero-bg::after {
+  background: #34D399;
+  bottom: -120px;
+  right: -120px;
+  animation-delay: 5s;
+}
+
+@keyframes floatGlow {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(80px, 60px);
+  }
+}
+
+/* ✨ Floating particles (base style) */
+.hero-particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #34D399;
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: floatParticle 10s linear infinite;
+}
+
+@keyframes floatParticle {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-100vh);
+  }
+}
+
+/* ✨ Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🟢 Buttons */
 .btn {
   @apply px-5 py-2 rounded-lg text-white font-medium transition-all duration-300;
   background-color: var(--primary);
+  box-shadow: 0 0 20px rgba(16,185,129,0.4);
 }
 
 .btn:hover {
   background-color: var(--primary-light);
-  box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+  box-shadow: 0 0 40px rgba(16,185,129,0.8);
 }
 
-/* 🧾 Card Styling */
+/* 🧾 Cards */
 .card {
   background-color: var(--card-bg);
-  @apply rounded-xl p-5 transition-all duration-300;
+  @apply rounded-xl p-5 transition-all duration-300 border border-white/10;
+  backdrop-filter: blur(10px);
 }
 
 .card:hover {
   border: 1px solid #10B981;
-  transform: translateY(-4px);
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(16,185,129,0.2);
 }
 
 /* 🔗 Links */
@@ -95,7 +131,7 @@ a:hover {
   color: var(--primary-light);
 }
 
-/* ✨ Headings Glow Effect */
+/* ✨ Headings Glow */
 h1, h2, h3 {
-  text-shadow: 0 0 10px rgba(16, 185, 129, 0.25);
+  text-shadow: 0 0 12px rgba(16,185,129,0.25);
 }
