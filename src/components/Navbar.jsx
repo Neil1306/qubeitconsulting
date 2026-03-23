@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import { useState } from "react"
 import useTheme from "../hooks/useTheme"
+import logo from "../assets/QubeITLogo.png"
 
 export default function Navbar() {
   const [theme, setTheme] = useTheme()
@@ -12,15 +13,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
         {/* 🌿 Logo */}
-        <Link to="/" className="flex flex-col leading-tight">
-          <span className="text-xl font-bold text-emerald-400">
-            Qube IT
-          </span>
-          <span className="text-xs tracking-widest text-gray-400">
-            CONSULTANCY
-          </span>
-        </Link>
-
+<Link to="/" className="flex items-center gap-2">
+  <img 
+    src={logo} 
+    alt="Qube IT consulting logo" 
+    className="h-8 w-auto"
+  />
+</Link>
         {/* 💻 Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
           <Link className="hover:text-emerald-400 transition" to="/">Home</Link>
