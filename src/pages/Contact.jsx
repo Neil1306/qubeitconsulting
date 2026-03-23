@@ -30,17 +30,54 @@ export default function Contact() {
               </div>
             </Reveal>
 
-            <Reveal delay={0.2}>
-              <div className="card">
-                <h3 className="text-white mb-4">Send Message</h3>
-                <form className="space-y-4">
-                  <input className="w-full p-3 bg-[#020617] border border-white/10 rounded" placeholder="Name" />
-                  <input className="w-full p-3 bg-[#020617] border border-white/10 rounded" placeholder="Email" />
-                  <textarea className="w-full p-3 bg-[#020617] border border-white/10 rounded" />
-                  <button className="btn w-full">Send</button>
-                </form>
-              </div>
-            </Reveal>
+<Reveal delay={0.2}>
+  <div className="card">
+    <h3 className="text-white mb-6 text-xl font-semibold">Send Message</h3>
+
+    <form
+      action="https://formspree.io/f/xgongwvd"
+      method="POST"
+      className="space-y-4"
+    >
+      {/* Name */}
+      <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        required
+        className="w-full p-3 bg-[#020617] border border-white/10 rounded text-white placeholder-gray-500 focus:border-emerald-400 outline-none"
+      />
+
+      {/* Email */}
+      <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        required
+        className="w-full p-3 bg-[#020617] border border-white/10 rounded text-white placeholder-gray-500 focus:border-emerald-400 outline-none"
+      />
+
+      {/* Message */}
+      <textarea
+        name="message"
+        rows="5"
+        placeholder="Your Message"
+        required
+        className="w-full p-3 bg-[#020617] border border-white/10 rounded text-white placeholder-gray-500 focus:border-emerald-400 outline-none"
+      ></textarea>
+
+      {/* Button */}
+      <button type="submit" className="btn w-full">
+        Send Message
+      </button>
+    </form>
+
+    {/* Optional note */}
+    <p className="text-sm text-gray-500 mt-4">
+      We’ll get back to you within 24 hours.
+    </p>
+  </div>
+</Reveal>
 
           </div>
 
