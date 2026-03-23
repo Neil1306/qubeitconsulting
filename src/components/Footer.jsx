@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import logo from "../assets/QubeITLogo.png"
 
 export default function Footer() {
   return (
@@ -8,14 +9,16 @@ export default function Footer() {
 
         {/* 🌿 Brand */}
         <div>
-          <h2 className="text-xl font-bold text-emerald-400 mb-2">
-            Qube IT
-          </h2>
-          <p className="text-sm text-gray-400">
-            Strategic consulting for sustainable growth. Helping businesses
-            transform, scale, and succeed.
-          </p>
-        </div>
+  <img 
+    src={logo} 
+    alt="Qube IT consulting logo" 
+    className="h-8 w-auto drop-shadow-[0_0_8px_rgba(16,185,129,0.6)]"
+  />
+  <p className="text-sm text-gray-400">
+    Strategic consulting for sustainable growth. Helping businesses
+    transform, scale, and succeed.
+  </p>
+</div>
 
         {/* 🔗 Navigation */}
         <div>
