@@ -7,69 +7,89 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/80 dark:bg-darkBg/80 backdrop-blur border-b">
+    <nav className="sticky top-0 z-50 backdrop-blur-lg bg-[#020617]/80 border-b border-white/10">
+      
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
-        {/* Logo */}
+        {/* 🌿 Logo */}
         <Link to="/" className="flex flex-col leading-tight">
-          <span className="text-xl font-bold tracking-wide">Cube IT</span>
-          <span className="text-xs tracking-widest text-secondary dark:text-gray-400">
+          <span className="text-xl font-bold text-emerald-400">
+            Qube IT
+          </span>
+          <span className="text-xs tracking-widest text-gray-400">
             CONSULTANCY
           </span>
         </Link>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-8 text-sm font-medium">
-          <Link className="hover:text-accent" to="/">Home</Link>
-          <Link className="hover:text-accent" to="/about">About</Link>
-          <Link className="hover:text-accent" to="/services">Services</Link>
-          <Link className="hover:text-accent" to="/case-studies">Case Studies</Link>
+        {/* 💻 Desktop Menu */}
+        <div className="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+          <Link className="hover:text-emerald-400 transition" to="/">Home</Link>
+          <Link className="hover:text-emerald-400 transition" to="/about">About</Link>
+          <Link className="hover:text-emerald-400 transition" to="/services">Services</Link>
+          <Link className="hover:text-emerald-400 transition" to="/case-studies">Case Studies</Link>
+
           <Link
             to="/contact"
-            className="px-4 py-2 rounded-lg bg-accent text-white hover:opacity-90 transition"
+            className="btn text-sm"
           >
             Contact
           </Link>
 
+          {/* 🌙 Theme Toggle */}
           <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="ml-2 px-3 py-1 border rounded-md text-xs"
+            className="ml-2 px-3 py-1 border border-white/10 rounded-md text-xs hover:border-emerald-400 transition"
           >
             {theme === "dark" ? "☀️" : "🌙"}
           </button>
         </div>
 
-        {/* Mobile Hamburger */}
+        {/* 📱 Mobile Button */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-2xl"
+          className="md:hidden text-white text-2xl"
           aria-label="Toggle menu"
         >
-          ☰
+          {open ? "✕" : "☰"}
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* 📱 Mobile Menu */}
       {open && (
-        <div className="md:hidden bg-white dark:bg-darkBg border-t px-6 py-4 space-y-4">
-          <Link onClick={() => setOpen(false)} to="/">Home</Link>
-          <Link onClick={() => setOpen(false)} to="/about">About</Link>
-          <Link onClick={() => setOpen(false)} to="/services">Services</Link>
-          <Link onClick={() => setOpen(false)} to="/case-studies">Case Studies</Link>
+        <div className="md:hidden bg-[#020617] border-t border-white/10 px-6 py-6 space-y-5 text-gray-300">
+          
+          <Link onClick={() => setOpen(false)} className="block text-lg hover:text-emerald-400" to="/">
+            Home
+          </Link>
+
+          <Link onClick={() => setOpen(false)} className="block text-lg hover:text-emerald-400" to="/about">
+            About
+          </Link>
+
+          <Link onClick={() => setOpen(false)} className="block text-lg hover:text-emerald-400" to="/services">
+            Services
+          </Link>
+
+          <Link onClick={() => setOpen(false)} className="block text-lg hover:text-emerald-400" to="/case-studies">
+            Case Studies
+          </Link>
+
           <Link
             onClick={() => setOpen(false)}
             to="/contact"
-            className="block text-accent font-semibold"
+            className="block text-center bg-emerald-500 hover:bg-emerald-400 text-white py-3 rounded-lg transition shadow-[0_0_20px_rgba(16,185,129,0.4)]"
           >
             Contact
           </Link>
 
+          {/* 🌙 Theme Toggle */}
           <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="border rounded-md px-3 py-1 text-sm"
+            className="w-full border border-white/10 rounded-lg px-4 py-2 text-sm hover:border-emerald-400 transition"
           >
-            {theme === "dark" ? "Switch to Light" : "Switch to Dark"}
+            {theme === "dark" ? "Switch to Light ☀️" : "Switch to Dark 🌙"}
           </button>
+
         </div>
       )}
     </nav>
