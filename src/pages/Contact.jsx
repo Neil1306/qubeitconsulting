@@ -1,5 +1,7 @@
+import MainLayout from "../layouts/MainLayout"
 export default function Contact() {
   return (
+    <MainLayout>
     <div className="bg-white dark:bg-darkBg transition-colors">
       <div className="max-w-7xl mx-auto px-6 py-20">
         
@@ -106,5 +108,6 @@ export default function Contact() {
         </div>
       </div>
     </div>
+    </MainLayout>
   )
 }
