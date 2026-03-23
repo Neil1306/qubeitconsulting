@@ -2,22 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 🌿 Emerald Theme Variables */
+:root {
+  --primary: #10B981;       /* Emerald */
+  --primary-light: #34D399;
+  --dark-bg: #020617;
+  --card-bg: #0F172A;
+  --text-light: #E2E8F0;
+}
+
+/* 🌞 Light Mode */
 body {
-  @apply bg-white text-primary antialiased transition-colors duration-300;
+  @apply bg-white text-gray-800 antialiased transition-colors duration-300;
 }
 
+/* 🌙 Dark Mode */
 .dark body {
-  @apply bg-darkBg text-darkText;
+  background-color: var(--dark-bg);
+  color: var(--text-light);
 }
 
-
-/* Animated gradient background */
+/* 🔥 Animated Gradient Background (UPDATED) */
 .hero-bg {
   background: linear-gradient(
     120deg,
-    #2563eb,
-    #0f172a,
-    #334155
+    #020617,
+    #0F172A,
+    #10B981
   );
   background-size: 300% 300%;
   animation: gradientMove 12s ease infinite;
@@ -27,14 +38,53 @@ body {
   background: linear-gradient(
     120deg,
     #020617,
-    #0f172a,
-    #2563eb
+    #0F172A,
+    #10B981,
+    #34D399
   );
   background-size: 300% 300%;
 }
 
+/* ✨ Smooth Gradient Animation */
 @keyframes gradientMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+
+/* 🟢 Buttons (Global Styling) */
+.btn {
+  @apply px-5 py-2 rounded-lg text-white font-medium transition-all duration-300;
+  background-color: var(--primary);
+}
+
+.btn:hover {
+  background-color: var(--primary-light);
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+}
+
+/* 🧾 Card Styling */
+.card {
+  background-color: var(--card-bg);
+  @apply rounded-xl p-5 transition-all duration-300;
+}
+
+.card:hover {
+  border: 1px solid #10B981;
+  transform: translateY(-4px);
+}
+
+/* 🔗 Links */
+a {
+  color: var(--primary);
+  transition: 0.2s;
+}
+
+a:hover {
+  color: var(--primary-light);
+}
+
+/* ✨ Headings Glow Effect */
+h1, h2, h3 {
+  text-shadow: 0 0 10px rgba(16, 185, 129, 0.25);
 }
