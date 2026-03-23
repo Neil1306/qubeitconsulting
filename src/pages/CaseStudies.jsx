@@ -1,7 +1,8 @@
 import CaseStudyCard from "../components/CaseStudyCard"
-
+import MainLayout from "../layouts/MainLayout"
 export default function CaseStudies() {
   return (
+    <MainLayout>
     <div className="max-w-7xl mx-auto px-6 py-20">
       <h2 className="text-4xl font-bold mb-6">Case Studies</h2>
       <p className="text-secondary max-w-2xl mb-12">
@@ -32,5 +33,6 @@ export default function CaseStudies() {
         />
       </div>
     </div>
+     </MainLayout>
   )
 }
