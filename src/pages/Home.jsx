@@ -8,9 +8,28 @@ export default function Home() {
       
       {/* 🔥 Hero Section */}
       <section className="hero-bg relative overflow-hidden">
+        
+        {/* 🌿 Glow overlay */}
         <div className="absolute inset-0 bg-emerald-500/10 blur-3xl opacity-20"></div>
 
-        <div className="max-w-7xl mx-auto px-6 py-32 text-center relative z-10">
+        {/* ✨ Floating particles */}
+        <div className="absolute inset-0 z-0">
+          {[...Array(20)].map((_, i) => (
+            <span
+              key={i}
+              className="hero-particle"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDuration: `${6 + Math.random() * 10}s`,
+              }}
+            />
+          ))}
+        </div>
+
+        {/* 🚀 Content */}
+        <div className="max-w-7xl mx-auto px-6 py-32 text-center relative z-10 animate-[fadeInUp_1s_ease]">
+          
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
             Strategic Consulting for
             <span className="text-emerald-400"> Sustainable Growth</span>
@@ -22,13 +41,14 @@ export default function Home() {
           </p>
 
           <div className="flex justify-center gap-4 flex-wrap">
-            <button className="bg-emerald-500 hover:bg-emerald-400 px-6 py-3 rounded-lg font-medium transition shadow-[0_0_20px_rgba(16,185,129,0.4)]">
+            <button className="btn">
               Get Started
             </button>
-            <button className="border border-white/20 hover:border-emerald-400 px-6 py-3 rounded-lg transition">
+            <button className="border border-white/20 hover:border-emerald-400 px-6 py-3 rounded-lg transition hover:shadow-[0_0_20px_rgba(16,185,129,0.3)]">
               Learn More
             </button>
           </div>
+
         </div>
       </section>
 
@@ -38,22 +58,22 @@ export default function Home() {
 
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 relative z-10">
           
-          <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 text-center transition duration-300 hover:scale-105 hover:border-emerald-400/40 hover:shadow-[0_0_25px_rgba(16,185,129,0.3)]">
+          <div className="card text-center">
             <Counter value={8} />
             <p className="text-gray-400 mt-2">Years Experience</p>
           </div>
 
-          <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 text-center transition duration-300 hover:scale-105 hover:border-emerald-400/40 hover:shadow-[0_0_25px_rgba(16,185,129,0.3)]">
+          <div className="card text-center">
             <Counter value={40} />
             <p className="text-gray-400 mt-2">Projects Delivered</p>
           </div>
 
-          <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 text-center transition duration-300 hover:scale-105 hover:border-emerald-400/40 hover:shadow-[0_0_25px_rgba(16,185,129,0.3)]">
+          <div className="card text-center">
             <Counter value={98} suffix="%" />
             <p className="text-gray-400 mt-2">Client Satisfaction</p>
           </div>
 
-          <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 text-center transition duration-300 hover:scale-105 hover:border-emerald-400/40 hover:shadow-[0_0_25px_rgba(16,185,129,0.3)]">
+          <div className="card text-center">
             <Counter value={8} />
             <p className="text-gray-400 mt-2">Countries Served</p>
           </div>
