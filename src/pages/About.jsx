@@ -9,7 +9,10 @@ export default function About() {
 
           {/* 🔥 Page Title */}
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
-            About <span className="text-emerald-400">Qube IT consulting</span>
+            About{" "}
+            <span className="bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text text-transparent">
+              Qube IT consulting
+            </span>
           </h2>
 
           {/* Intro */}
@@ -24,7 +27,7 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             
             <div className="card">
-              <h3 className="text-xl font-semibold text-emerald-400 mb-3">
+              <h3 className="text-xl font-semibold mb-3 bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text text-transparent">
                 Who We Are
               </h3>
               <p className="text-gray-400 leading-relaxed">
@@ -37,7 +40,7 @@ export default function About() {
             </div>
 
             <div className="card">
-              <h3 className="text-xl font-semibold text-emerald-400 mb-3">
+              <h3 className="text-xl font-semibold mb-3 bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text text-transparent">
                 What We Do
               </h3>
               <p className="text-gray-400 leading-relaxed">
@@ -53,38 +56,29 @@ export default function About() {
           {/* 💎 Values Section */}
           <div className="mb-16">
             <h3 className="text-2xl font-semibold mb-6 text-white">
-              Our <span className="text-emerald-400">Values</span>
+              Our{" "}
+              <span className="bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text text-transparent">
+                Values
+              </span>
             </h3>
 
             <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
               
-              <div className="card text-sm">
-                <h4 className="font-semibold mb-2 text-emerald-400">Integrity</h4>
-                <p className="text-gray-400">
-                  We operate with honesty, transparency, and accountability.
-                </p>
-              </div>
-
-              <div className="card text-sm">
-                <h4 className="font-semibold mb-2 text-emerald-400">Excellence</h4>
-                <p className="text-gray-400">
-                  We maintain the highest standards of quality and professionalism.
-                </p>
-              </div>
-
-              <div className="card text-sm">
-                <h4 className="font-semibold mb-2 text-emerald-400">Partnership</h4>
-                <p className="text-gray-400">
-                  We work as true partners with our clients.
-                </p>
-              </div>
-
-              <div className="card text-sm">
-                <h4 className="font-semibold mb-2 text-emerald-400">Impact</h4>
-                <p className="text-gray-400">
-                  We focus on delivering measurable results.
-                </p>
-              </div>
+              {[
+                "Integrity",
+                "Excellence",
+                "Partnership",
+                "Impact"
+              ].map((val, i) => (
+                <div key={i} className="card text-sm">
+                  <h4 className="font-semibold mb-2 bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text text-transparent">
+                    {val}
+                  </h4>
+                  <p className="text-gray-400">
+                    Delivering high standards and measurable results.
+                  </p>
+                </div>
+              ))}
 
             </div>
           </div>
@@ -92,7 +86,10 @@ export default function About() {
           {/* 💎 Closing Section */}
           <div className="max-w-3xl card">
             <h3 className="text-2xl font-semibold mb-4 text-white">
-              Why Qube IT consulting
+              Why{" "}
+              <span className="bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text text-transparent">
+                Qube IT consulting
+              </span>
             </h3>
             <p className="text-gray-400 leading-relaxed">
               Clients choose Qube IT consulting for our ability to balance
