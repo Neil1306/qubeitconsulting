@@ -9,13 +9,15 @@ export default function Services() {
 
           {/* 🔥 Page Header */}
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
-            Our <span className="text-emerald-400">Services</span>
+            Our{" "}
+            <span className="bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text text-transparent">
+              Services
+            </span>
           </h2>
 
           <p className="text-lg md:text-xl text-gray-400 max-w-3xl mb-16">
-            Qube IT consulting offers a comprehensive range of advisory services
-            designed to help organizations navigate complexity, accelerate growth,
-            and achieve sustainable results.
+            We partner with organizations to design strategies, build capabilities,
+            and deliver transformation programs that create measurable and lasting impact.
           </p>
 
           {/* 💎 Services Grid */}
@@ -23,69 +25,69 @@ export default function Services() {
             
             {/* Service 1 */}
             <div className="card">
-              <h3 className="text-xl font-semibold text-emerald-400 mb-3">
-                Business & Growth Strategy
+              <h3 className="text-xl font-semibold mb-3 bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text text-transparent">
+                Strategy & Growth Consulting
               </h3>
               <p className="text-gray-400 leading-relaxed mb-4">
-                We help leadership teams define clear strategies that align vision,
-                market opportunity, and execution.
+                Define clear direction and unlock growth opportunities through
+                data-driven strategy and market insights.
               </p>
               <ul className="list-disc list-inside text-gray-400 space-y-2">
-                <li>Corporate and competitive strategy</li>
-                <li>Market entry and expansion</li>
+                <li>Corporate & business strategy</li>
+                <li>Market expansion & entry</li>
+                <li>Revenue growth optimization</li>
                 <li>Business model innovation</li>
-                <li>Growth planning and prioritization</li>
               </ul>
             </div>
 
             {/* Service 2 */}
             <div className="card">
-              <h3 className="text-xl font-semibold text-emerald-400 mb-3">
-                Digital Transformation
+              <h3 className="text-xl font-semibold mb-3 bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text text-transparent">
+                Digital & Cloud Transformation
               </h3>
               <p className="text-gray-400 leading-relaxed mb-4">
-                We support organizations in modernizing their technology,
-                processes, and operating models.
+                Modernize your technology landscape to enable scalability,
+                agility, and innovation.
               </p>
               <ul className="list-disc list-inside text-gray-400 space-y-2">
-                <li>Digital strategy and roadmap</li>
-                <li>Legacy system modernization</li>
-                <li>Cloud and platform transformation</li>
-                <li>Change and adoption management</li>
+                <li>Cloud migration & modernization</li>
+                <li>Digital strategy & roadmaps</li>
+                <li>Platform transformation</li>
+                <li>Change management & adoption</li>
               </ul>
             </div>
 
             {/* Service 3 */}
             <div className="card">
-              <h3 className="text-xl font-semibold text-emerald-400 mb-3">
-                Product & Technology Advisory
+              <h3 className="text-xl font-semibold mb-3 bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text text-transparent">
+                Product & Engineering Advisory
               </h3>
               <p className="text-gray-400 leading-relaxed mb-4">
-                We help product and tech teams improve delivery speed, quality,
-                and alignment with business goals.
+                Accelerate product delivery and improve engineering excellence
+                with modern practices and scalable architectures.
               </p>
               <ul className="list-disc list-inside text-gray-400 space-y-2">
-                <li>Product strategy and roadmap design</li>
-                <li>Technology architecture reviews</li>
-                <li>Agile and delivery optimization</li>
-                <li>Engineering leadership coaching</li>
+                <li>Product strategy & roadmap</li>
+                <li>Architecture & system design</li>
+                <li>Agile transformation</li>
+                <li>Engineering leadership support</li>
               </ul>
             </div>
 
             {/* Service 4 */}
             <div className="card">
-              <h3 className="text-xl font-semibold text-emerald-400 mb-3">
-                Operational Excellence
+              <h3 className="text-xl font-semibold mb-3 bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text text-transparent">
+                Data & AI Enablement
               </h3>
               <p className="text-gray-400 leading-relaxed mb-4">
-                We streamline operations, improve efficiency, and drive
-                continuous improvement.
+                Turn data into a strategic asset and leverage AI to drive smarter
+                decisions and automation.
               </p>
               <ul className="list-disc list-inside text-gray-400 space-y-2">
-                <li>Process optimization and redesign</li>
-                <li>Cost reduction strategies</li>
-                <li>Performance frameworks</li>
-                <li>Operating model design</li>
+                <li>Data strategy & governance</li>
+                <li>Business intelligence & dashboards</li>
+                <li>AI & machine learning solutions</li>
+                <li>Advanced analytics</li>
               </ul>
             </div>
           </div>
@@ -93,24 +95,30 @@ export default function Services() {
           {/* 💎 How We Work */}
           <div className="max-w-4xl mb-20 card">
             <h3 className="text-2xl font-semibold mb-4 text-white">
-              How We Work
+              How{" "}
+              <span className="bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text text-transparent">
+                We Work
+              </span>
             </h3>
             <p className="text-gray-400 leading-relaxed">
-              Our engagements are collaborative, insight-driven, and outcome
-              focused. We combine rigorous analysis with hands-on execution,
-              working side by side with client teams to ensure sustainable impact.
+              Our approach combines strategic thinking with hands-on execution.
+              We collaborate closely with your teams, bringing structure to complexity,
+              accelerating delivery, and ensuring long-term, sustainable impact.
             </p>
           </div>
 
           {/* 🚀 CTA */}
           <div className="card text-center">
             <h3 className="text-3xl font-bold mb-4 text-white">
-              Let’s Build the Right Strategy Together
+              Ready to Transform Your Business?
             </h3>
             <p className="text-gray-400 mb-6">
-              Talk to our consultants about how we can support your business objectives.
+              Let’s explore how we can help you scale, innovate, and succeed.
             </p>
-            <a href="#/contact" className="btn inline-block">
+            <a
+              href="#/contact"
+              className="inline-block px-6 py-3 rounded-lg font-medium text-white bg-gradient-to-r from-emerald-500 to-sky-500 hover:from-emerald-400 hover:to-sky-400 transition shadow-[0_0_25px_rgba(56,189,248,0.4)]"
+            >
               Book a Consultation
             </a>
           </div>
