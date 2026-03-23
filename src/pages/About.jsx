@@ -1,5 +1,7 @@
+import MainLayout from "../layouts/MainLayout"
 export default function About() {
   return (
+    <MainLayout>
     <div className="bg-white dark:bg-darkBg transition-colors">
       <div className="max-w-7xl mx-auto px-6 py-20">
         
@@ -101,5 +103,6 @@ export default function About() {
 
       </div>
     </div>
+    </MainLayout>
   )
 }
